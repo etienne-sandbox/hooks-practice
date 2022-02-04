@@ -38,7 +38,7 @@ export interface PlacesResponse {
 export type GetPlacesOptions = { offset?: number };
 
 export function getPlaces({ offset = 0 }: GetPlacesOptions = {}) {
-  return get<PlacesResponse>(`http://localhost:3001/workouts?offset=${offset}`);
+  return get<PlacesResponse>(`http://localhost:3001/places?offset=${offset}`);
 }
 
 export function postActionLogin(username: string, password: string) {
