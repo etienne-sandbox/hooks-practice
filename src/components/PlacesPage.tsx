@@ -1,26 +1,11 @@
 import { Fragment } from "react";
 import { useQuery } from "../hooks/useQuery";
+import { getPlaces } from "../logic/api";
 import { Layout } from "./Layout";
 import { ResourceHandler } from "./ResourceHandler";
 
-interface Place {
-  image: string;
-  name: string;
-  slug: string;
-  workoutCount: number;
-}
-
-interface PlacesResponse {
-  results: Array<Place>;
-  total: number;
-}
-
 export function PlacesPage(): JSX.Element {
-  const placesResource = useQuery(async () => {
-    const res = await fetch(`http://localhost:3001/places`);
-    const data = await res.json();
-    return data as PlacesResponse;
-  });
+  const placesResource = useQuery(() => getPlaces());
 
   return (
     <Layout
