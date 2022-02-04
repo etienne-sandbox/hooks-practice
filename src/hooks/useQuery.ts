@@ -1,6 +1,6 @@
 import { useCallback, useDebugValue, useEffect, useRef, useState } from "react";
 
-type Resource<T> =
+export type Resource<T> =
   | { status: "pending" }
   | { status: "resolved"; data: T; update: () => void; updating: boolean }
   | { status: "rejected"; error: unknown };

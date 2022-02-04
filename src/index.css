@@ -1,13 +1,53 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.Layout {
+  width: calc(100vw - 40px);
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.Layout-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.Layout-NavItem {
+  display: block;
+  background-color: #c5cae9;
+  color: #37474f;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.Layout-NavItem--active {
+  background-color: #fb8c00;
+  color: white;
+}
+
+.Layout-title {
+  font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
 }
